@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>定时按钮的测试页面</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <form action="">
+    初始状态：
+    <label for="enabled"><input id="enabled" name="able" type="radio"> 启用</label> 
+    <label for="unabled"><input id="unabled" name="able" type="radio" checked> 禁用</label><br>
+    禁用时长：<input type="number" id="number" name='number'><br>
+    按钮内容：<input type="text" id="text" name='text'><br>
+    事件代码：<textarea name="" id="" cols="30" rows="10">alert('按钮被点击了！')</textarea><br>
+    <input type="button" id='add' value="添加定时器按钮">
+
+  </form>
+  <hr>
+  <div id="main">
+
+  </div>
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script> -->
+  <script data-main='main.js' src="https://cdn.bootcss.com/require.js/2.3.6/require.min.js"></script>
+  <!-- <script src="index.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>定时按钮的测试页面</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <form action="">
+    初始状态：
+    <label for="enabled"><input id="enabled" name="able" type="radio"> 启用</label> 
+    <label for="unabled"><input id="unabled" name="able" type="radio" checked> 禁用</label><br>
+    禁用时长：<input type="number" id="number" name='number'><br>
+    按钮内容：<input type="text" id="text" name='text'><br>
+    事件代码：<textarea name="" id="" cols="30" rows="10">alert('按钮被点击了！')</textarea><br>
+    <input type="button" id='add' value="添加定时器按钮">
+
+  </form>
+  <hr>
+  <div id="main">
+
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="index.js"></script>
+  <script>
+    $(function(){
+      var $btnAdd = $('#add'),
+          $enabled = $('#enabled'),
+          $unabled = $('#unabled'),
+          $num = $('#number'),
+          $title = $('#text'),
+          $eventCode = $('textarea'),
+          opt={};
+      $enabled.click(function(){
+        opt.disable=true;
+      })
+      $unabled.click(function(){
+        opt.disable=false;
+      })
+      $num.change(function(){
+        opt.num=Number($num.val());
+      })
+      $title.change(function(){
+        if($title.val() !== ""){
+          opt.title=$title.val();
+        }else{
+          opt.title="同意";
+        }
+      })
+      // $timerButton.show(opt);
+      $btnAdd.click(function(){
+        opt.container="#main";
+        console.log($eventCode.html());
+        opt.onClick=function(){
+          eval($eventCode.html());
+        }
+        $timerButton.show(opt);
+
+      })
+    })
+  </script>
+</body>
+</html>

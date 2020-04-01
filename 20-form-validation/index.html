@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css" type="text/css"/>
+<body>
+  <div class="main">
+    <label for="">宽度：</label>
+    <input id="width" type="text" required>
+    <span>*</span>
+    <br>
+    <div id='width-validation-message'></div>
+    <label for="">高度：</label>
+    <input id="height" type="text" required>
+    <span>*</span>
+    <br>
+    <div id='height-validation-message'></div>
+    <input id="calculate" type="button" value="计算">
+    <br>
+    <label for="">面积：</label>
+    <input id= "area" disabled type="text">
+    <br>
+    <label for="">周长：</label>
+    <input id="perimeter" disabled type="text">
+    <br>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="index.js"></script>
+</html>
